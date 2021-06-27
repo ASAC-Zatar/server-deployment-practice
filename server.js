@@ -13,6 +13,10 @@ app.get('/bad', (req, res) => {
   throw new Error('Something went wrong ');
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
 app.use('*', notFoundHandler);
 app.use(errorHandler);
 function start(port) {
